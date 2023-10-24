@@ -1,5 +1,15 @@
 version: "3"
 services:
+  frontend:
+    image: styughjvbn/coco_frontend
+    container_name: coco_frontend
+    build:
+      context: ./coco/
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    stdin_open: true
+
   mysql:
     image: styughjvbn/coco_db
     container_name: coco_db
@@ -8,7 +18,7 @@ services:
     ports: #host 3307과 컨테이너의 3306포트 연결
       - "3307:3306"
     env_file: # 설정에 필요한 환경변수
-      - ./mysql/local.env
+      - ./envs/mysql.env
     tty: true
     restart: always
     networks:
@@ -63,6 +73,7 @@ services:
     privileged: true # isolate의 sandbox마다 컴퓨터 자원 제한을 하기 위해 필요한 설정값
     networks:
       - coco_network
+
 volumes: # task의 test case와 같이 유지되는 파일들을 저장하는 볼륨
   static:
 
