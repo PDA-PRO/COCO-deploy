@@ -58,6 +58,7 @@
     ```bash
     docker compose up
     ```
+    Depending on the performance of your desktop, it may take 5 to 10 minutes for all settings to be completed.
     
 ## Execution
 You can use it by accessing port http://localhost:8080 through a browser.  
