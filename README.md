@@ -62,7 +62,7 @@
 ## 실행
 브라우저를 통해 http://localhost:8080 포트로 접속하여 이용하실 수 있습니다.  
 기본적으로 설정되어 있는 관리자의 계정은 아이디 `admin` 비밀번호 `admin1234!`입니다.  
-http://localhost:1000 포트로 접속시 API 문서를 조회할 수 있습니다.  
+http://localhost:1000/docs 포트로 접속시 API 문서를 조회할 수 있습니다.  
 `플러그인`을 추가하고 싶다면 https://github.com/PDA-PRO/COCO-plugin 를 방문해주세요
 
 ## 환경 설정
