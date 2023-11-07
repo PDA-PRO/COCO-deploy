@@ -1,6 +1,9 @@
 [한국어](https://github.com/PDA-PRO/COCO-deploy/blob/main/README.md)|English
+
 ## DEMO
-- http://codingcoach.co.kr/
+
+- Web site http://codingcoach.co.kr/
+- Demo video https://youtu.be/QmN3g7kjjw4
 
 ## Environmental preparation
 
@@ -18,8 +21,6 @@
    sudo apt-get update
    sudo apt-get install docker-ce docker-ce-cli containerd.io
    sudo usermod -aG docker
-   sudo curl -L "https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-   sudo chmod +x /usr/local/bin/docker-compose
    ```
 
 2. Install Docker Compose
@@ -75,4 +76,25 @@ If you would like to add additional **`plugins`**, please visit https://github.c
 
 You can modify DB information, JWT expiration period, and initial admin account by modifying the environment variable file in the `env` folder.
 
-## Q&A
+## FAQ
+
+### Docker permission error
+
+The `docker pull` command does not work with the following error message:
+
+```
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.40/containers/json: dial unix /var/run/docker.sock: connect: permi
+ssion denied
+```
+
+### Resolution
+
+Add the user to the docker group
+
+```
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+```
+
+---
