@@ -63,10 +63,10 @@ For other ways to install Docker and Docker Compose, see [https://docs.docker.co
 
 ## Execution
 
-You can use it by accessing port http://localhost:8080 through a browser.  
+You can use it by accessing port http://localhost:80 through a browser.  
 The initially set administrator ID is `admin` and the password is `admin1234!`.  
 Also, the MySQL password is `qwer1234`.  
-You can view the API document when connecting to http://localhost:1000 port.  
+You can view the API document when connecting to http://localhost:1000/docs .  
 If you would like to add additional **`plugins`**, please visit https://github.com/PDA-PRO/COCO-plugin
 
 ## Setting environment variables

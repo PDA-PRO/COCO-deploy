@@ -7,8 +7,10 @@ services:
       context: ./coco/
       dockerfile: Dockerfile
     ports:
-      - "8080:80"
+      - "80:80"
     stdin_open: true
+    networks:
+      - coco_proxy
 
   mysql:
     image: styughjvbn/coco_db
@@ -47,6 +49,7 @@ services:
       - ./envs/backend.env
     networks:
       - coco_network
+      - coco_proxy
 
   # celery broker
   redis:
@@ -80,4 +83,7 @@ volumes: # task의 test case와 같이 유지되는 파일들을 저장하는 �
 networks:
   coco_network:
     name: coco_network
+    attachable: true
+  coco_proxy:
+    name: coco_proxy
     attachable: true
