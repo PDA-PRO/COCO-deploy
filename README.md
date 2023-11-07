@@ -1,7 +1,8 @@
 한국어|[English](https://github.com/PDA-PRO/COCO-deploy/blob/main/README.eng.md)
 
 ## DEMO
-- http://codingcoach.co.kr/
+- 웹사이트 http://codingcoach.co.kr/  
+- 비디오 https://youtu.be/QmN3g7kjjw4
 
 ## 환경 준비
 
